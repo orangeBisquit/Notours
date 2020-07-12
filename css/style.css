@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #fff;
+  padding: 35px;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+}
+
+.header {
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.7), #28b485), url("/Source/img/background/header-bg.jpg");
+  background-size: cover;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+.header__logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+.header__logo {
+  height: 35px;
+}
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align-last: center;
+}
+.header__slogan {
+  margin: 60px;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.header__slogan-main, .header__slogan-sub {
+  display: block;
+}
+.header__slogan-main {
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 17px;
+  animation-name: moveSloganMain;
+  animation-duration: 0.7s;
+  animation-delay: 0.5s;
+  animation-timing-function: ease-out;
+}
+.header__slogan-sub {
+  padding-right: 5px;
+  letter-spacing: 8px;
+  animation-name: moveSloganSub;
+  animation-duration: 0.7s;
+  animation-delay: 0.5s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes moveSloganMain {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveSloganSub {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+.button:link, .button:visited {
+  display: inline-block;
+  border-radius: 100px;
+  padding: 15px 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.1s;
+}
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.button--white {
+  background-color: #fff;
+  color: #787878;
+}
+/*# sourceMappingURL=style.css.map */
